@@ -9218,7 +9218,7 @@ done:
 	return ret;
 }
 
-#ifdef CONFIG_SOUND_CONTROL
+#ifdef CONFIG_SOUND_CONTROL_NEW
  static struct snd_soc_codec *sound_control_codec_ptr;
  
  static ssize_t headphone_gain_show(struct kobject *kobj,
@@ -9439,7 +9439,7 @@ static int tavil_soc_codec_probe(struct snd_soc_codec *codec)
 	int i, ret;
 	void *ptr = NULL;
 
-#ifdef CONFIG_SOUND_CONTROL
+#ifdef CONFIG_SOUND_CONTROL_NEW
 	sound_control_codec_ptr = codec;
 #endif
 	control = dev_get_drvdata(codec->dev->parent);
@@ -9590,7 +9590,7 @@ static int tavil_soc_codec_probe(struct snd_soc_codec *codec)
 	tavil_vote_svs(tavil, false);
 
 
-#ifdef CONFIG_SOUND_CONTROL
+#ifdef CONFIG_SOUND_CONTROL_NEW
  	sound_control_kobj = kobject_create_and_add("sound_control", kernel_kobj);
  	if (sound_control_kobj == NULL) {
  		pr_warn("%s kobject create failed!\n", __func__);
