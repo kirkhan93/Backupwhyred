@@ -178,6 +178,7 @@ enum zone_stat_item {
 	NR_SWAPCACHE,
 	NR_INDIRECTLY_RECLAIMABLE_BYTES, /* measured in bytes */
 
+
 #ifdef CONFIG_UKSM
 	NR_UKSM_ZERO_PAGES,
 #endif
